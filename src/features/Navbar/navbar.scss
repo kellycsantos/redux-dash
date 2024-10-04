@@ -1,0 +1,16 @@
+.header {
+  background: rgb(218, 218, 218);
+  height: 10vh;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .Navbar {
+    a {
+      margin-left: 15px;
+      &.active {
+        color: rgb(47, 255, 238);
+      }
+    }
+  }
+}
