@@ -7,7 +7,7 @@ interface UserState {
     isLogging : boolean
 }
 
-const initialState : UserState = {
+let initialState : UserState = {
     name: '',
     email: '',
     password: '',
@@ -20,9 +20,21 @@ const userSlice = createSlice({
     reducers: {
         showName:(state) =>{
             console.log('Do state', state)
+        },
+        doLogin(_state, data){
+            const updated = {
+                name: 'Kelly',
+                email: '',
+                password: '',
+                isLogging : true
+            }
+            initialState = updated
+            console.log("Payload", initialState)
+         
+            console.log("Payload atualizado", updated)
         }
     }
 })
 
-export const {showName} = userSlice.actions;
+export const {showName, doLogin} = userSlice.actions;
 export default userSlice.reducer
