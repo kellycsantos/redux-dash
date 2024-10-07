@@ -1,5 +1,7 @@
+@import '../../index.scss';
+
 .header {
-  background: rgb(218, 218, 218);
+  background: $secondary;
   height: 10vh;
   padding: 15px;
   display: flex;
@@ -8,8 +10,11 @@
   .Navbar {
     a {
       margin-left: 15px;
+      font-weight: 600;
+      color: $white;
       &.active {
-        color: rgb(47, 255, 238);
+        color: $palered;
+        text-decoration: underline;
       }
     }
   }
